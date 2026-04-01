@@ -225,6 +225,10 @@ if (!isValidOperation(operation)) {
 } else {
 
     const nums = parseNumbers(numbers);
+    if (nums.length === 0) {
+    console.log("Error: Please provide at least two numbers to calculate.");
+    process.exit(1);
+}
     let result;
 
    
