@@ -11,8 +11,8 @@ export function subtract(numbers) {
 
 export function multiply(numbers) {
   return numbers.reduce((acc, curr) => acc * curr, 1);
+  
 }
-
 
 export function divide(numbers) {
   return numbers.reduce((acc, curr) => {
