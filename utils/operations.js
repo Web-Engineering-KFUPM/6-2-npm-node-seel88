@@ -1,6 +1,24 @@
-export function add(a, b) { return a + b; }
-export function subtract(a, b) { return a - b; }
-export function multiply(a, b) { return a * b; }
-export function divide(a, b) { 
-    return b === 0 ? "Error: Division by zero" : a / b; 
+
+export function add(numbers) {
+  return numbers.reduce((sum, num) => sum + num, 0);
+}
+
+
+export function subtract(numbers) {
+  return numbers.reduce((acc, curr) => acc - curr);
+}
+
+
+export function multiply(numbers) {
+  return numbers.reduce((acc, curr) => acc * curr, 1);
+}
+
+
+export function divide(numbers) {
+  return numbers.reduce((acc, curr) => {
+    if (curr === 0) return "Error: Division by zero";
+   
+    if (typeof acc === "string") return acc; 
+    return acc / curr;
+  });
 }
