@@ -3,8 +3,7 @@ import _ from "lodash";
 export function parseNumbers(input) {
 
   const numbers = _.map(input, (str) => Number(str));
-
-  return _.compact(numbers);
+  return _.filter(numbers, (n) => !isNaN(n));
 }
 
 export function isValidOperation(operation) {
